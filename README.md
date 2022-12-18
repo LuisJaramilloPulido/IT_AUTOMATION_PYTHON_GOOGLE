@@ -9,7 +9,7 @@
 - [x] [**Week 4**](Course_1/Week_4) Strings, Lists and Dictionaries
 - [ ] [**Week 5**](Course_1/Week_5) Object Oriented Programming(Optional)
 - [x] [**Week 6**](Course_1/Week_6) Final Project
-- [ ] 
+
 ### [Course 2&emsp;Using Python to Interact with the Operating System](Course_2/)
 
 - [x] [**Week 1**](Course_2/Week_1) Getting Your Python On
