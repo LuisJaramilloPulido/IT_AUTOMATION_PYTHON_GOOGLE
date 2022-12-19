@@ -2,7 +2,7 @@
 
 ## COURSES
 
-### [Course 1&emsp;Crash Course on Python](Course_1/)
+### [Course 1&emsp;Crash Course on Python](1 Crash Course on Python/)
 - [x] [**Week 1**](Course_1/Week_1) Hello Python!
 - [x] [**Week 2**](Course_1/Week_2) Basic Python Syntax
 - [x] [**Week 3**](Course_1/Week_3) Loops
