@@ -2,12 +2,12 @@
 
 ## COURSES
 
-### [Course 1&emsp;Crash Course on Python](1 Crash Course on Python/)
+### [Course 1&emsp;Crash Course on Python](Course_1/)
 - [x] [**Week 1**](Course_1/Week_1) Hello Python!
 - [x] [**Week 2**](Course_1/Week_2) Basic Python Syntax
 - [x] [**Week 3**](Course_1/Week_3) Loops
-- [x] [**Week 4**](1 Crash Course on Python/Week4) Strings, Lists and Dictionaries
-- [ ] [**Week 5**](Course_1/Week_5) Object Oriented Programming(Optional)
+- [x] [**Week 4**](Course_1/Week4) Strings, Lists and Dictionaries
+- [x] [**Week 5**](Course_1/Week_5) Object Oriented Programming(Optional)
 - [x] [**Week 6**](Course_1/Week_6) Final Project
 
 ### [Course 2&emsp;Using Python to Interact with the Operating System](Course_2/)
