@@ -4,7 +4,6 @@
 #--------------------------------------------------
 #%%
 # Question 1 
-
 # The is_palindrome function checks if a string is a palindrome. A palindrome
 #  is a string that can be equally read from left to right or right to left, 
 #  omitting blank spaces, and ignoring capitalization. Examples of palindromes 
@@ -36,7 +35,6 @@ print(is_palindrome("kayak")) # Should be True
 #--------------------------------------------------
 #%%
 # Question 2 
-
 # Using the format method, fill in the gaps in the convert_distance function 
 # so that it returns the phrase "X miles equals Y km", with Y having only 1 decimal 
 # place. For example, convert_distance(12) should return "12 miles equals 19.2 km".
@@ -54,7 +52,6 @@ print(convert_distance(11)) # Should be: 11 miles equals 17.6 km
 #--------------------------------------------------
 #%%
 # Question 3
-
 # If we have a string variable named Weather = "Rainfall", which of the 
 # following will print the substring or all characters before the "f"?
 Weather = "Rainfall"
@@ -66,8 +63,6 @@ print(Weather[1:4])
 #--------------------------------------------------
 #%%
 # Question 4
-
-# Pregunta 4
 # Fill in the gaps in the nametag function so that it uses 
 # the format method to return first_name and the first initial 
 # of last_name followed by a period. For example, nametag("Jane", "Smith") 
@@ -87,7 +82,6 @@ print(nametag("Jean-Luc", "Grand-Pierre"))
 #--------------------------------------------------
 #%%
 # Question 5
-
 # The replace_ending function replaces the old string in a sentence 
 # with the new string, but only if the sentence ends with the old string. 
 # If there is more than one occurrence of the old string in the sentence, 
