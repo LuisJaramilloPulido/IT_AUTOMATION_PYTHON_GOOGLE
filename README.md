@@ -6,7 +6,7 @@
 - [x] [**Week 1**](Course_1/Week_1) Hello Python!
 - [x] [**Week 2**](Course_1/Week_2) Basic Python Syntax
 - [x] [**Week 3**](Course_1/Week_3) Loops
-- [x] [**Week 4**](1 Crash Course on Python/Week_4) Strings, Lists and Dictionaries
+- [x] [**Week 4**](1 Crash Course on Python/Week4) Strings, Lists and Dictionaries
 - [ ] [**Week 5**](Course_1/Week_5) Object Oriented Programming(Optional)
 - [x] [**Week 6**](Course_1/Week_6) Final Project
 
