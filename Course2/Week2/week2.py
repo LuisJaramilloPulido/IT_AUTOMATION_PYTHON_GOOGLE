@@ -116,7 +116,7 @@ for name in os.listdir(dir):
 import csv
 f=open("csv_file.txt")
 #creamos objeto con los datos extraidos del fichero
-csv_f=csv.reader(f)
+csv_f=csv.reader(f,delimiter = ',')
 for row in csv_f:
     name, phone, role=row#desempaquetar valores, row[0]
     print("Name:{}, Phone:{}, Role:{}".format(name, phone,role))
