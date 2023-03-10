@@ -64,7 +64,7 @@ print(result[1])
 # marathon
 # python
 
-#queremos buscar patron del palabra "python" en el fichero words
+#Queremos buscar patron del palabra "python" en el fichero words
 #que no distinga mayuscula o minuscula
 #grep -i python /usr/share/dict/words
 #OUTPUT
@@ -73,8 +73,8 @@ print(result[1])
 # python
 # python's
 
-#realizar una busqueda con un patron "l.rts", donde el "." es un comodin y
-#puede ser cualquier caracter
+#Realizar una busqueda con un patron "l.rts", donde el "." es un comodin de un caracter
+#y puede ser cualquier caracter
 #~$ grep l.rts /usr/share/dict/words
 #OUTPUT
 # alerts
@@ -110,16 +110,16 @@ import re
 
 #buscamos el patron "aza" en la cadena "plaza", si lo encuentra 
 # devuelve objeto que contiene un match del patron y la posicion  del patron en la cadena,
-# span(ini,fin+1)-> span=(2, 5)
+# span(ini,fin+1)-> span=(2,5)
 result = re.search(r"aza", "plaza")# "r" indica que se trata de una cadena sin procesar(python no deberia intentar interpretar)
 print(result)
 #OUTPUT
-# match='plaza',span=(2, 5)
+# span=(2, 5) match='plaza'
 
 result = re.search(r"aza", "bazaar")
 print(result)
 #OUTPUT
-#match='aza' span=(1, 4)
+# span=(1, 4) match='aza'
 
 #Si no hay coincidencia imprime "none"
 result = re.search(r"aza", "maze")
@@ -127,20 +127,21 @@ print(result)
 #OUTPUT
 #imprime none
 
-#si el patron esta al principio de la cadena
+#Si el patron esta al principio de la cadena
 print(re.search(r"^x","xenon"))
 #OUTPUT
-#match='x' span=(0, 1)
+# span=(0, 1) match='x'
 
-#si el patron esta al principio de la cadena
+#si el patron esta al final de la cadena
 print(re.search(r"n$","xenon"))
 #OUTPUT
 #span=(4, 5), match='n'
 
-#"." del patron actua como comodin
+#"." del patron actua como comodin de un caracter de cualquier tipo
+# (ya sea numerico,letra,guiones,espacios o puntos)
 print(re.search(r"p.ng","penguin"))
 #OUTPUT
-#match='peng' span=(0, 4)
+#span=(0, 4) match='peng'
 
 # Rellene el código para comprobar si el texto pasado contiene
 # las vocales a, e e i, con exactamente una ocurrencia
@@ -148,7 +149,7 @@ print(re.search(r"p.ng","penguin"))
 import re
 def check_aei (text):
   result = re.search(r"a.e.i", text)
-  return result != None
+  return result != None#si hay resultado devuelve true
 
 print(check_aei("academia")) # True
 print(check_aei("aerial")) # False
@@ -170,7 +171,7 @@ print(re.search(r"p.png","Pangaea", re.IGNORECASE))
 #2 Wildcards and Character Classes (Comodines y clases de caracteres)
 
 
-# clases de caracteres se escriben entre corchetes [] y 
+# Clases de caracteres se escriben entre corchetes [] y 
 # vamos a enumerar los caracteres que queremos que coincidan
 # dentro de esos corchetes. 
 
@@ -216,7 +217,7 @@ print(check_punctuation("End of the line")) # False
 # True
 # False
 
-# "^" se usa para excluir 
+# "^" se usa para excluir los caracteres que van a continuación
 # crear un patrón de búsqueda que busque cualquier carácter que no sea una letra.
 # (en este caso es un espacio en blanco)
 print(re.search(r"[^a-zA-Z]","This is a sentence with spaces."))
@@ -245,7 +246,7 @@ print(re.search(r"cat|dog","I like both dogs and cats."))
 # OUTPUT
 #span=(12, 15), match='dog'>
 
-#me mostrara todas las palabras coincidentes
+#Mostrara todas las palabras coincidentes
 print(re.findall(r"cat|dog","I like both dogs and cats."))
 # OUTPUT
 #['dog', 'cat']
@@ -272,8 +273,10 @@ print(re.search(r"Py[a-z]*n","Pyn"))
 # OUTPUT
 #span=(0, 3), match='Pyn'
 
-# la expresion "+" muestra el patron formado por la union de caracteres,
-#tiene que cumplir que van despues el otro
+
+#La expresion "+" muestra el patron formado por la union de caracteres,
+#tiene que cumplir que van despues del otro
+#"+" significa que ese caracter tiene varias repeticiones
 
 #hubo una coincidencia(la o y la l tienen que estar juntas), 
 # el patron de coincidencia nos muestra la cadena coincidente mas corta posible
@@ -286,7 +289,14 @@ print(re.search(r"o+l+","woolly"))
 # OUTPUT
 #span=(1, 5), match='ooll'
 
-print(re.search(r"o+l+","wooooollly"))#span=(1, 9), match='ooooolll'
+print(re.search(r"o+l+","woollly"))
+# OUTPUT
+# span=(1, 6), match='oolll'
+
+
+print(re.search(r"o+l+","wooooollly"))
+#span=(1, 9), match='ooooolll'
+
 #nuestra cadena tiene una o y una l, pero tenia otros caracteres en medio, 
 # debido a esto no coincide con el patron de busqueda
 print(re.search(r"o+l+","boil"))
@@ -350,7 +360,7 @@ print(re.search(r"\.com","mydomain.com"))
 #OUTPUT
 #span=(8, 12), match='.com'
 
-#\w coincide con el conjunto de caracteres->letras, números y guiones bajos. 
+#\w te devuelve cualquier caracter(letras, números y guiones bajos. )
 #excepto los espacios en blanco
 #Busqueda de coincidencia con caracteres alfanumericos 
 print(re.search(r"\w*","This is an example"))
@@ -421,6 +431,10 @@ re.search(r"A.*a", "Azerbaijan")
 re.search(r"^A.*a$", "Argentina")
 #OUTPUT
 #span=(0, 9), match='Argentina'>
+
+#esto es como lo haria yo
+print(re.search(r"[aA].*[aA]", "Arzebaijan"))
+#span=(0, 9), match='Arzebaija'>
 
 #No hay coincidencia(es correcto)
 re.search(r"^A.*a$", "Azerbaijan")

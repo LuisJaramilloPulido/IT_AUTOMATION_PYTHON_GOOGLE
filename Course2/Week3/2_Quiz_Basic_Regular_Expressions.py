@@ -13,7 +13,7 @@
 
 import re
 def check_web_address(text):
-  pattern = r'^[A-Za-z._-][^/@]*$'
+  pattern = r"\.[a-zA-Z]*[a-zA-Z]$"
   result = re.search(pattern, text)
   return result != None
 
@@ -35,7 +35,7 @@ print(check_web_address("My_Favorite-Blog.US")) # True
 # ¿Cuántos de los conceptos que acabas de aprender puedes usar aquí?
 import re
 def check_time(text):
-  pattern = _
+  pattern = r"[1-9][0-2]?[:][0-5][0-9] ?[aApP][mM]$"
   result = re.search(pattern, text)
   return result != None
 
@@ -58,7 +58,7 @@ print(check_time("five o'clock")) # False
 
 import re
 def contains_acronym(text):
-  pattern = ___ 
+  pattern = r"[(][A-Z0-9][a-zA-Z0-9]*[)]"
   result = re.search(pattern, text)
   return result != None
 
@@ -74,13 +74,14 @@ print(contains_acronym("Have fun using a self-contained underwater breathing app
 # en re.search(r"Py.*n", sample.txt)?
 
 
-# Raw strings
-
+# Raw strings (correcto)
+                  #(Las cadenas "sin procesar" significan que el intérprete de Python no intentará interpretar ningún carácter especial y, 
+                  # simplemente pasará la cadena a la función tal como está).
 # Regex
 
 # Repeat
 
-# Result
+# Result 
 
 #--------------------------------------------------
 #5
@@ -88,7 +89,7 @@ print(contains_acronym("Have fun using a self-contained underwater breathing app
 
 # a)Matches plus sign characters
 
-# b)Matches one or more occurrences of the character before it
+# b)Matches one or more occurrences of the character before it(correcto)
 
 # c)Matches the end of a string
 
@@ -105,7 +106,7 @@ print(contains_acronym("Have fun using a self-contained underwater breathing app
 # al principio del texto.
 import re
 def check_zip_code (text):
-  result = re.search(r"___", text)
+  result = re.search(r"[ ]\d{5}|[ ]\d{5}-\d{4}", text)
   return result != None
 
 print(check_zip_code("The zip codes for New York are 10001 thru 11104.")) # True
